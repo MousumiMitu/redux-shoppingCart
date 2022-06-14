@@ -1,11 +1,20 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 import { useGetAllProductsQuery } from "../features/productsApi";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { items: products, status } = useSelector((state) => state.products);
   const { data, error, isLoading } = useGetAllProductsQuery();
-  console.log("Api", products);
+  const dispatch = useDispatch();
+  const history = useNavigate();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+    history("/cart", { replace: true });
+  };
+
   return (
     <div className="home-container">
       {status === "success" ? (
@@ -21,7 +30,9 @@ const Home = () => {
                     <span>{product.desc}</span>
                     <span className="price">${product.price}</span>
                   </div>
-                  <button onClick="">Add To Cart</button>
+                  <button onClick={() => handleAddToCart(product)}>
+                    Add To Cart
+                  </button>
                 </div>
               ))}
           </div>

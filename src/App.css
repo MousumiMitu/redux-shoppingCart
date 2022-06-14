@@ -27,7 +27,7 @@
 
 .nav-bar {
   height: 70px;
-  background: black;
+  background: rgb(28, 4, 89);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +51,7 @@
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  background: yellow;
+  background: rgb(210, 210, 208);
   font-size: 14px;
   font-weight: 700;
   color: black;
@@ -113,7 +113,7 @@
   margin-top: 2rem;
   font-weight: 400;
   letter-spacing: 1.15px;
-  background-color: #4b70e2;
+  background-color: rgb(28, 4, 89);
   color: #f9f9f9;
   border: none;
   outline: none;
@@ -246,7 +246,7 @@
   border-radius: 5px;
   font-weight: 400;
   letter-spacing: 1.15px;
-  background-color: #4b70e2;
+  background-color: rgb(28, 4, 89);
   color: #f9f9f9;
   border: none;
   outline: none;

@@ -6,10 +6,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import productReducer, { productFetch } from "./features/productSlice";
 import { productsApi } from "./features/productsApi";
+import cartReducer, { getTotals } from "./features/cartSlice";
 
 const store = configureStore({
   reducer: {
     products: productReducer,
+    cart: cartReducer,
     [productsApi.reducerPath]: productsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -17,6 +19,7 @@ const store = configureStore({
 });
 
 store.dispatch(productFetch());
+store.dispatch(getTotals());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

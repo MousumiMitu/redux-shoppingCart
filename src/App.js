@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
-import NavBar from "./components/NavBar";
 import "./App.css";
 import LayOut from "./components/LayOut";
 import PageNotFound from "./components/PageNotFound";

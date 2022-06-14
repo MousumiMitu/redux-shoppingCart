@@ -9,7 +9,9 @@ const initialState = {
 export const productFetch = createAsyncThunk(
   "products/productFetch",
   async () => {
-    const response = await axios.get("http://localhost:5000/products");
+    const response = await axios.get(
+      "https://intense-gorge-45369.herokuapp.com/products"
+    );
     return response?.data;
   }
 );
